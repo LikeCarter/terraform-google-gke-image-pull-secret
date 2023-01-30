@@ -31,8 +31,23 @@ variable "service_account_display_name" {
   description = "Service account display name"
 }
 
-variable "gcr_domain" {
+variable "hub" {
   type        = string
-  default     = "https://eu.gcr.io"
-  description = "Domain used for GCR"
+  default     = "https://index.docker.io/v1/"
+  description = "Domain used for pulling"
+}
+
+variable "docker_username" {
+  type        = string
+  description = "Username for docker auth"
+}
+
+variable "docker_password" {
+  type        = string
+  description = "Password for docker auth"
+}
+
+variable "docker_email" {
+  type        = string
+  description = "Email for docker auth"
 }
